@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+
+body {
+    background-color: #edf0f1;
+    padding-top: 50px;
+}
+
+body, input, button {
+    font-family: "Open Sans", sans-serif
+}
+
+header {
+    width: calc(50% - 15px);
+    height: 50px;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #2dadc4;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0. 15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header input {
+    width: calc(100% - 60px);
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 10px;
+    text-indent: 15px;
+    padding-right: 60px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+}
+
+header input::-webkit-input-placeholder {
+    color:rgba(255, 255, 255, 0.75);
+}
+header input::-moz-input-placeholder {
+    color:rgba(255, 255, 255, 0.75);
+}
+header input::-o-input-placeholder {
+    color:rgba(255, 255, 255, 0.75);
+}
+header input::-ms-input-placeholder {
+    color:rgba(255, 255, 255, 0.75);
+}
+
+header button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px; 
+    
+    z-index: 2;
+    border-radius: 25px;
+    background: white;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+}
+
+header button svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%
+    left: 50%;
+    margin: -8px 0 0 -8px;
+    fill: #2dadc4;
+}
+
+header button:hover {
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.5);
+}
+
+.taskList {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+ul.uncompleted {
+    width: 100%;
+    float: left;
+    margin-left: -40px;
+}
+
+ul.completed {
+    
+}
+
+ul.uncompleted li {
+    width: calc(50% - 139px);
+    height: 22px;
+    max-height: 50px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    margin-bottom: 15px;
+    list-style-type: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 14px 100px 14px 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+ul.uncompleted li:hover{
+    box-shadow: 2px 2px 4px rgb(45, 173, 196, .75);
+}
+
+ul.uncompleted li .buttons {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+ul.uncompleted li .buttons button {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+}
+
+ul.uncompleted li .buttons button:last-of-type:before {
+    content: "";
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    background-color: #edf0f1;
+}
+
+ul.uncompleted li .buttons button svg {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+}
+
+ul.uncompleted li .buttons button.finish svg {
+    fill: #2dadc4;
+    border-radius: 20px;
+    border: 1.5px solid #2dadc4;
+}
+
+ul.uncompleted li .buttons button.finish:hover svg{
+    fill: #FFF;
+    background-color: #2dadc4;
+}
+
+ul.uncompleted li .buttons button.remove svg{
+    fill: #c0cecb;
+}
+
+ul.uncompleted li .buttons button.remove:hover svg{
+    fill: #e85656;
+}
+
+.noFill {
+    fill: none;
+}
+
+.rightBorder {
+    content: "";
+    width: 5px;
+    height: 75%;
+    position: absolute;
+    background-color: #2dadc4;
+    opacity: 0.2;
+    top: 125px;
+    left: calc(50% + 21px);
+    border-radius: 20px;
+    position: fixed;
+}
+
+.details {
+    left: calc(50% + 50px);
+    top: 80px;
+    position: fixed;
+    display: none;
+}    
+
+.hide_button {
+    display: none;
+}
